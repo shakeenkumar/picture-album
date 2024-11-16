@@ -1,0 +1,15 @@
+/* Larger screen styles */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
