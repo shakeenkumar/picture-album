@@ -1,109 +1,95 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    color: #333;
   }
   
+  /* Header Styles */
   header {
-    background-color: #4b0082;
+    background-color: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   
-  .navbar {
+  header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .menu ul {
-    display: flex;
-    gap: 15px;
+  header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
   }
   
-  .menu ul li a {
+  header nav ul li {
+    margin: 0 1rem;
+  }
+  
+  header nav ul li a {
+    color: white;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
   }
   
-  #menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
+  header nav ul li a:hover {
+    color: #f39c12;
+  }
+  
+  /* Responsive Menu */
+  .hidden {
     display: none;
   }
   
-  /* Main Content */
-  main {
-    padding: 20px;
-    text-align: center;
+  @media (max-width: 768px) {
+    #menu {
+      flex-direction: column;
+    }
+    #menu.hidden {
+      display: none;
+    }
   }
   
-  h2 {
-    color: #4b0082;
+  /* Gallery Styles */
+  #gallery {
+    padding: 2rem;
   }
   
-  .image-grid {
+  .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
   }
   
   figure {
     margin: 0;
+    text-align: center;
   }
   
   figure img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  figcaption {
-    margin-top: 5px;
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  /* Footer */
+  /* Footer Styles */
   footer {
-    background-color: #4b0082;
-    color: white;
     text-align: center;
-    padding: 10px;
-    font-size: 0.9rem;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    margin-top: 2rem;
   }
   
   footer p {
-    margin: 5px 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .menu ul {
-      display: none;
-      flex-direction: column;
-      background-color: #4b0082;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      padding: 10px;
-      border-radius: 8px;
-    }
-  
-    .menu ul.show {
-      display: flex;
-    }
-  
-    #menu-toggle {
-      display: block;
-    }
+    margin: 0;
+    font-size: 0.9rem;
   }
   
